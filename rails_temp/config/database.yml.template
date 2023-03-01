@@ -8,7 +8,7 @@ default: &default
 
 development:
   <<: *default
-  database: rails_temp_devlopment
+  database: rails_temp_development
   username: <%= ENV['DATABASE_USERNAME'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>
 
