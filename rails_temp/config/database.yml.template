@@ -8,19 +8,19 @@ default: &default
 
 development:
   <<: *default
-  database: rails_temp
+  database: rails_temp_devlopment
   username: <%= ENV['DATABASE_USERNAME'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>
 
 test:
   <<: *default
-  database: rails_temp
+  database: rails_temp_test
   username: <%= ENV['DATABASE_USERNAME'] %>
   password: <%= ENV['DATABASE_PASSWORD'] %>
 
 production:
   <<: *default
-  database: rails_temp
+  database: rails_temp_production
   username: <%= ENV['PRODUCTION_DATABASE_USERNAME'] %>
   password: <%= ENV['PRODUCTION_DATABASE_PASSWORD'] %>
   host: <%= ENV['PRODUCTION_DATABASE_HOST'] %>
