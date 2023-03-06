@@ -1,0 +1,19 @@
+<p><%= @student.first_name %></p>
+<p><%= @student.last_name %></p>
+<p><%= @student.username %></p>
+<p><%= @student.dob %></p>
+<p><%= @student.phone_number %></p>
+<p><%= @student.email %></p>
+<p><%= @student.term_start_date %></p>
+<p><%= @student.term_end_date %></p>
+
+
+
+
+<ul>
+  <li><%= link_to "Edit", edit_student_path(@student) %></li>
+  <li><%= link_to "Destroy", student_path(@student), data: {
+                    turbo_method: :delete,
+                    turbo_confirm: "Are you sure?"
+                  } %></li>
+</ul>

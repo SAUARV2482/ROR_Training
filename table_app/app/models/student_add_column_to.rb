@@ -1,0 +1,2 @@
+class StudentAddColumnTo < ApplicationRecord
+end

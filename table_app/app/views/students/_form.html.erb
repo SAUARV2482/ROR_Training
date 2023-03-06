@@ -1,0 +1,83 @@
+<%= form_with model: @student do |form| %>
+  <div>
+    <%= form.label :first_name %><br>
+    <%= form.text_field :first_name %>
+    <% @student.errors.full_messages_for(:first_name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :last_name%><br>
+    <%= form.text_field :last_name %>
+        <% @student.errors.full_messages_for(:last_name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+     <%# <% @article.errors.full_messages_for(:last_name).each do |message| %> 
+  </div>
+
+  <div>
+    <%= form.label :username%><br>
+    <%= form.text_field :username %>
+        <% @student.errors.full_messages_for(:username).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :email%><br>
+    <%= form.email_field :email%>
+        <% @student.errors.full_messages_for(:email).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :password %><br>
+    <%= form.password_field :password %>
+        <% @student.errors.full_messages_for(:password).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.label :dob %><br>
+     <%= form.date_field :dob %>
+         <% @student.errors.full_messages_for(:dob).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.label :phone_number %><br>
+    <%= form.text_field :phone_number %>
+        <% @student.errors.full_messages_for(:phone_number).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  <div>
+    <%= form.label :term_start_date %><br>
+    <%= form.date_field :term_start_date %>
+        <% @student.errors.full_messages_for(:term_start_date).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  
+  <div>
+    <%= form.label :term_end_date %><br>
+    <%= form.date_field :term_end_date %>
+        <% @student.errors.full_messages_for(:term_end_date).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  
+  <div>
+    <%= form.label :zipcode %><br>
+    <%= form.text_field :zipcode %>
+        <% @student.errors.full_messages_for(:zipcode).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+  
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
